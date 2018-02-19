@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
@@ -192,7 +192,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4472491904042850, guid: 3fa41553fa62e3e47a8280261ffd3713, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4472491904042850, guid: 3fa41553fa62e3e47a8280261ffd3713, type: 2}
       propertyPath: m_LocalScale.x
@@ -247,54 +247,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1264744389
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.8771689
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.5314264
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.22111076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.97524875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1073488108233604, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_Name
-      value: TSA_Shuttle(Inimigo) (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1309287555
 Prefab:
   m_ObjectHideFlags: 0
@@ -450,7 +404,7 @@ Transform:
   m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602833152 stripped
 GameObject:
@@ -473,98 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadbdbd8b6c2c644089ba893e892a8b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1823377779
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 11.695612
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.99740505
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.22111076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.97524875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1073488108233604, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_Name
-      value: TSA_Shuttle(Inimigo) (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-  m_IsPrefabParent: 0
---- !u!1001 &1836348130
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -6.0347795
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.0777514
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.22111076
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.97524875
-      objectReference: {fileID: 0}
-    - target: {fileID: 4135844236490136, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1073488108233604, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-      propertyPath: m_Name
-      value: TSA_Shuttle(Inimigo) (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e683aa7e3e6fc0d4d90c8ff734c1cbdc, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1843557257
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,7 +508,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1843557262
 MonoBehaviour:
