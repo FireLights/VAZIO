@@ -505,7 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipSpeed: 4
   shipHandling: 120
-  shipArmor: 60
+  shipArmor: 300
   fisShield: 40
   lsrShield: 40
   shipClass: 0

@@ -11,7 +11,7 @@ using UnityEngine;
     {
         cooldownTimer -= Time.deltaTime;
 
-        if (Input.GetButton("Fire1") && cooldownTimer <= 0)
+		if (Input.GetButton("Fire1") && cooldownTimer <= 0)
         {
             cooldownTimer = fireDelay;
 
