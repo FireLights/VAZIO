@@ -9,11 +9,10 @@ public class Projetil : MonoBehaviour {
     public float speed;
     public float dissipation;
     public float damage;
-
     public int dmgType;
-
     private float shotDissipation;
 
+	public GameObject explosion;
 
     private void Start()
     {
@@ -33,6 +32,7 @@ public class Projetil : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+		Instantiate (explosion, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
 

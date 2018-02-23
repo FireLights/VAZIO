@@ -10,6 +10,7 @@ public class ProcessamentoDeDano : MonoBehaviour {
 
     private float shotDamage;
     private int dmgType;
+	public GameObject explosion;
     public string tag;
     public enum tags { friendlyprojectile, enemyprojectile}
     public tags targetTag;
@@ -51,7 +52,8 @@ public class ProcessamentoDeDano : MonoBehaviour {
 
     void checkDeath()
     {
-        if (shipArmor <= 0) Destroy(gameObject);
+		if (shipArmor <= 0)
+			destroy ();
     }
 
     void calculateDamage()
@@ -65,4 +67,11 @@ public class ProcessamentoDeDano : MonoBehaviour {
             else if (lsrShield <= 0) { shipArmor = shipArmor - shotDamage; }
         }
     }
+
+	void destroy() 
+	{
+		Instantiate (explosion, transform.position, transform.rotation);
+		Destroy (gameObject);
+	}
+		
 }

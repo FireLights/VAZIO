@@ -217,6 +217,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba48b0019d35c0648a5eee1ad1e5d127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 2
+  explode: 1
+  explosion: {fileID: 1551089742953276, guid: f4c3e0f5e495d43458a5ebbafbbafe6b, type: 2}
 --- !u!114 &114243930131155950
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +235,7 @@ MonoBehaviour:
   dissipation: 0.02
   damage: 5
   dmgType: 1
+  explosion: {fileID: 1551089742953276, guid: f4c3e0f5e495d43458a5ebbafbbafe6b, type: 2}
 --- !u!212 &212928857190840518
 SpriteRenderer:
   m_ObjectHideFlags: 1
