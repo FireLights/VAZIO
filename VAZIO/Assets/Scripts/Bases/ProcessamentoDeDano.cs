@@ -1,12 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProcessamentoDeDano : MonoBehaviour {
 
-    private float shipArmor;
-    private float fisShield;
-    private float lsrShield;
+	//elementos de UI
+	private Image armorBar, fisShieldBar, lsrShieldBar;
+	private Text armorText, fisShieldText, lsrShieldText;
+
+	//atributos iniciais
+	private float startShipArmor, startFisShield, startLsrShield;
+
+	//atributos atuais
+	private float shipArmor, fisShield, lsrShield;
 
     private float shotDamage;
     private int dmgType;
@@ -20,12 +27,15 @@ public class ProcessamentoDeDano : MonoBehaviour {
     void Start () {
 
         nave = this.GetComponent<StatsNave>();
+		setUI();
+		setStartingStats();
         resetShipStats();
         setTargetTag();
     }
 	
 	void Update () {
         checkDeath();
+		updateUI();
 	}
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -38,16 +48,44 @@ public class ProcessamentoDeDano : MonoBehaviour {
         }
     }
 
+	private void updateUI() {
+		armorBar.fillAmount = shipArmor / startShipArmor;
+		fisShieldBar.fillAmount = fisShield / startFisShield;
+		lsrShieldBar.fillAmount = lsrShield / startLsrShield;
+
+		armorText.text = shipArmor.ToString () + " / " + startShipArmor.ToString ();
+		fisShieldText.text = fisShield.ToString () + " / " + startFisShield.ToString ();
+		lsrShieldText.text = lsrShield.ToString () + " / " + startLsrShield.ToString ();
+	}
+
+	void setUI() 
+	{
+		armorBar = nave.armorBar;
+		fisShieldBar = nave.fisShieldBar;
+		lsrShieldBar = nave.lsrShieldBar; 
+
+		armorText = nave.armorText;
+		fisShieldText = nave.fisShieldText;
+		lsrShieldText = nave.lsrShieldText;
+	}
+
     void setTargetTag()
     {
         tag = targetTag.ToString();
     } 
 
+	void setStartingStats() 
+	{
+		startShipArmor = nave.shipArmor;
+		startFisShield = nave.fisShield;
+		startLsrShield = nave.lsrShield;
+	}
+
     void resetShipStats()
     {
-        shipArmor = nave.shipArmor;
-        fisShield = nave.fisShield;
-        lsrShield = nave.lsrShield;
+		shipArmor = startShipArmor;
+		fisShield = startFisShield;
+		lsrShield = startLsrShield;
     }
 
     void checkDeath()

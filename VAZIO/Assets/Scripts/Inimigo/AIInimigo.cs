@@ -22,12 +22,13 @@ public class AIInimigo : MonoBehaviour {
 	private bool targetOnSight = false;
 
 	void Start() {
-		weapon01.SetActive (false);
-		weapon02.SetActive (false);
+		disableWeapons ();
 	}
 
 	void Update () {
 		alterRadius ();
+		if (player == null)
+			disableWeapons ();
 		if (lookForTarget()) {
 			//encontrar jogador por tag "player"
 			findPlayer ();
@@ -75,7 +76,7 @@ public class AIInimigo : MonoBehaviour {
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotSpeed * Time.deltaTime);
 
         //deslocamento da nave se o inimigo se encontra a uma distancia maior do que x do jogador
-		if (Vector2.Distance (this.transform.position, player.position) > 3) {
+		if (Vector2.Distance (this.transform.position, player.position) > 1.5) {
 			Vector3 pos = transform.position;
 			Vector3 velocity = new Vector3 (0, speed * Time.deltaTime, 0);
 			pos += transform.rotation * velocity;
@@ -97,6 +98,11 @@ public class AIInimigo : MonoBehaviour {
         }
         if (player == null) return;
     }
+
+	private void disableWeapons() {
+		weapon01.SetActive(false);
+		weapon02.SetActive(false);
+	}
 
 
 	//getters e setters

@@ -1,14 +1,28 @@
 NOTAS DE VERSÃO:
 
-23/02/2018:
+
+
+	23/02/2018:
+
+	
 
 	-Movimento rudimentar (W e S movem a nave);
+	
 	-Zoom in e Zoom out da câmara com a roda do rato;
+	
 	-Parallax Scrolling;
+	
 	-Jogador e inimigo tem sistema de colisão;
+	
 	-ESC fecha a janela do jogo;
+	
 	-Botão esquerdo do rato dispara;
+	
 	-Script base de armas parcialmente completo (com velocidade, dissipação, taxa de tiro e função de redimensionamento do projétil);
+	
 	-Função “turbo” ao segurar o shift direito (NOTA: função crude e com finalidade de ser substituída quando for esse o caso com todo o sistema de movimento);
+	
 	-AI inimigo parcialmente programado;
+	
 	-Efeitos de explosão programados para a nave e para os projéteis;
+	-Interface rudimentar;

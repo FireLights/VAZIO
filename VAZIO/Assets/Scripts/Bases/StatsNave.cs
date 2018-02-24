@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StatsNave : MonoBehaviour {
 
+	//elementos de UI
+	public Image armorBar, fisShieldBar, lsrShieldBar;
+
+	public Text armorText, fisShieldText, lsrShieldText;
 
     //atributos de movimento
     public int shipSpeed = 6;
