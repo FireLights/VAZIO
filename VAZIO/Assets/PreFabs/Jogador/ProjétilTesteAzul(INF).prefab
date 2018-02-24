@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61780784889645038}
   - component: {fileID: 114761465171706606}
   - component: {fileID: 114090834842873402}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: "Proj\xE9tilTesteAzul(INF)"
   m_TagString: friendlyprojectile
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4400330092722692}
   - component: {fileID: 96797056593851664}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   dissipation: 0.02
-  damage: 20
+  damage: 5
   dmgType: 1
   explosion: {fileID: 1551089742953276, guid: f4c3e0f5e495d43458a5ebbafbbafe6b, type: 2}
 --- !u!114 &114761465171706606

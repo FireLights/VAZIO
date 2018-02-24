@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61173877236145864}
   - component: {fileID: 114186330694383796}
   - component: {fileID: 114695312625784392}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: "Proj\xE9tilTesteVermelho(SUP)"
   m_TagString: enemyprojectile
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4524570444405014}
   - component: {fileID: 96615147422804498}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
