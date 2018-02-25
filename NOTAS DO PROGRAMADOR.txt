@@ -1,3 +1,8 @@
+
+UI:
+-Pôr "scale with screen size" em todos os canvas;
+
+Criar Objetos:
 -Pôr os colliders dos projéteis sempre ligeiramente maiores que a sprite para a colisão ser detetada mais fácilmente;
 -Verificar sempre colisão entre camadas ao criar uma nova nave;
 -Verificar sempre layers e render layers ao criar qualquer objeto;
