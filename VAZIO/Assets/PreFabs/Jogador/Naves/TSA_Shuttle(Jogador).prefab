@@ -672,7 +672,7 @@ MonoBehaviour:
   dmgType: 1
   shotSpeed: 20
   shotDissipation: 0.02
-  shotDamage: 5
+  shotDamage: 10
 --- !u!114 &114308617739116566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -736,7 +736,7 @@ MonoBehaviour:
   player: {fileID: 0}
   shipSpeed: 15
   rotSpeed: 260
-  turboMultiplier: 1.5
+  turboMultiplier: 2
   rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &114352530629402044
 MonoBehaviour:
@@ -850,7 +850,7 @@ MonoBehaviour:
   dmgType: 1
   shotSpeed: 20
   shotDissipation: 0.02
-  shotDamage: 5
+  shotDamage: 10
 --- !u!114 &114692480144073610
 MonoBehaviour:
   m_ObjectHideFlags: 1
