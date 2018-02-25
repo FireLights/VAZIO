@@ -10,18 +10,22 @@ public class ProcessamentoDeDano : MonoBehaviour {
 	private Text armorText, fisShieldText, lsrShieldText;
 
 	//atributos iniciais
-	private float startShipArmor, startFisShield, startLsrShield;
+	private float totalShipArmor, totalFisShield, totalLsrShield;
+	private int dmgType;
 
 	//atributos atuais
-	private float shipArmor, fisShield, lsrShield;
-
+	private float curShipArmor, curFisShield, curLsrShield;
     private float shotDamage;
-    private int dmgType;
+
+	//objeto da explosão
 	public GameObject explosion;
-    public string tag;
-    public enum tags { friendlyprojectile, enemyprojectile}
+
+	//tags
+    private string tag;
+    public enum tags {friendlyprojectile, enemyprojectile}
     public tags targetTag;
 
+	//objeto dos atributos da nave
     StatsNave nave = new StatsNave();
 
     void Start () {
@@ -49,16 +53,17 @@ public class ProcessamentoDeDano : MonoBehaviour {
     }
 
 	private void updateUI() {
-		armorBar.fillAmount = shipArmor / startShipArmor;
-		fisShieldBar.fillAmount = fisShield / startFisShield;
-		lsrShieldBar.fillAmount = lsrShield / startLsrShield;
+		
+		armorBar.fillAmount = curShipArmor / totalShipArmor;
+		fisShieldBar.fillAmount = curFisShield / totalFisShield;
+		lsrShieldBar.fillAmount = curLsrShield / totalLsrShield;
 
-		armorText.text = shipArmor.ToString () + " / " + startShipArmor.ToString ();
-		fisShieldText.text = fisShield.ToString () + " / " + startFisShield.ToString ();
-		lsrShieldText.text = lsrShield.ToString () + " / " + startLsrShield.ToString ();
+		armorText.text = curShipArmor.ToString () + " / " + totalShipArmor.ToString ();
+		fisShieldText.text = curFisShield.ToString () + " / " + totalFisShield.ToString ();
+		lsrShieldText.text = curLsrShield.ToString () + " / " + totalFisShield.ToString ();
 	}
 
-	void setUI() 
+	private void setUI() 
 	{
 		armorBar = nave.armorBar;
 		fisShieldBar = nave.fisShieldBar;
@@ -69,40 +74,40 @@ public class ProcessamentoDeDano : MonoBehaviour {
 		lsrShieldText = nave.lsrShieldText;
 	}
 
-    void setTargetTag()
+    private void setTargetTag()
     {
         tag = targetTag.ToString();
     } 
 
-	void setStartingStats() 
+	private void setStartingStats() 
 	{
-		startShipArmor = nave.shipArmor;
-		startFisShield = nave.fisShield;
-		startLsrShield = nave.lsrShield;
+		totalShipArmor = nave.curShipArmor;
+		totalFisShield = nave.curFisShield;
+		totalLsrShield = nave.curLsrShield;
 	}
 
-    void resetShipStats()
+    private void resetShipStats()
     {
-		shipArmor = startShipArmor;
-		fisShield = startFisShield;
-		lsrShield = startLsrShield;
+		curShipArmor = totalShipArmor;
+		curFisShield = totalFisShield;
+		curLsrShield = totalLsrShield;
     }
 
     void checkDeath()
     {
-		if (shipArmor <= 0)
+		if (curShipArmor <= 0)
 			destroy ();
     }
 
     void calculateDamage()
     {
         if (dmgType == 0) {
-            if (fisShield > 0) { fisShield = fisShield - shotDamage; }
-            else if (fisShield <= 0) { shipArmor = shipArmor - shotDamage; } 
+			if (curFisShield > 0) { curFisShield -= shotDamage; }
+			else if (curFisShield <= 0) { curShipArmor -= shotDamage; } 
         }
         else if (dmgType == 1) {
-            if (lsrShield > 0) { lsrShield = lsrShield - shotDamage; }
-            else if (lsrShield <= 0) { shipArmor = shipArmor - shotDamage; }
+			if (curLsrShield > 0) { curLsrShield -= shotDamage; }
+			else if (curLsrShield <= 0) { curShipArmor -= shotDamage; }
         }
     }
 

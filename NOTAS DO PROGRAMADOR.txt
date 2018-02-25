@@ -1,0 +1,4 @@
+-Pôr os colliders dos projéteis sempre ligeiramente maiores que a sprite para a colisão ser detetada mais fácilmente;
+-Verificar sempre colisão entre camadas ao criar uma nova nave;
+-Verificar sempre layers e render layers ao criar qualquer objeto;
+-Verificar atributos que têem de ser definidos manualmente ao criar qualquer objeto;
