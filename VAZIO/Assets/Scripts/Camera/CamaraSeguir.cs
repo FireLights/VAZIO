@@ -4,7 +4,7 @@ public class CamaraSeguir : MonoBehaviour
 {
 
     public Transform target;
-    public float smoothSpeed = 0.125f;
+    public float smoothSpeed = 0.3f;
     public Vector3 offset;
     public Vector3 velocity = Vector2.one;
     public string targetTag;

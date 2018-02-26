@@ -8,7 +8,7 @@ public class MovimentoJogador : MonoBehaviour {
 
     public float shipSpeed;
     public float rotSpeed;
-    public float turboMultiplier = 1.5f;
+    public float turboMultiplier;
     public Quaternion rot;
 
     private void Start()
@@ -48,24 +48,15 @@ public class MovimentoJogador : MonoBehaviour {
 
     }
 
-    public float getShipSpeed()
-    {
-        return shipSpeed;
-    }
 
-    public void setShipSpeed(float _shipSpeed)
-    {
-        shipSpeed = _shipSpeed;
+    public void setShipSpeed(float sS) {
+        shipSpeed = sS;
     }
-
-    public float getRotSpeed()
-    {
-        return rotSpeed;
+    public void setRotSpeed(float rS) {
+        rotSpeed = rS;
     }
-
-    public void setRotSpeed(float _rotSpeed)
-    {
-        rotSpeed = _rotSpeed;
+    public void setTurboMultiplier(float tM) {
+        turboMultiplier = tM;
     }
 
 }

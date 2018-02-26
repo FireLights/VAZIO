@@ -58,9 +58,12 @@ public class ProcessamentoDeDano : MonoBehaviour {
 		fisShieldBar.fillAmount = curFisShield / totalFisShield;
 		lsrShieldBar.fillAmount = curLsrShield / totalLsrShield;
 
-		armorText.text = curShipArmor.ToString () + " / " + totalShipArmor.ToString ();
-		fisShieldText.text = curFisShield.ToString () + " / " + totalFisShield.ToString ();
-		lsrShieldText.text = curLsrShield.ToString () + " / " + totalFisShield.ToString ();
+        if (armorText != null || fisShieldText != null || lsrShieldText != null) {
+            armorText.text = curShipArmor.ToString () + " / " + totalShipArmor.ToString ();
+		    fisShieldText.text = curFisShield.ToString () + " / " + totalFisShield.ToString ();
+		    lsrShieldText.text = curLsrShield.ToString () + " / " + totalFisShield.ToString ();
+        }
+		
 	}
 
 	private void setUI() 

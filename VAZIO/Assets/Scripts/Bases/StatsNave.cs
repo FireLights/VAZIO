@@ -11,8 +11,10 @@ public class StatsNave : MonoBehaviour {
 
 	public int baseShipSpeed = 6;
     public int baseShipHandling = 260;
+    public float baseTurboMultiplier = 1.3f;
 
 	public int curShipSpeed, curShipHandling;
+    public float curTurboMultiplier;
 
     public float baseShipArmor = 50;
     public float baseFisShield = 60;
@@ -45,6 +47,7 @@ public class StatsNave : MonoBehaviour {
         {
 			mov.setShipSpeed(curShipSpeed);
 			mov.setRotSpeed(curShipHandling);
+            mov.setTurboMultiplier(curTurboMultiplier);
         }
 
         if (ai != null)
@@ -58,6 +61,7 @@ public class StatsNave : MonoBehaviour {
 	{
 		curShipSpeed = baseShipSpeed;
 		curShipHandling = baseShipHandling;
+        curTurboMultiplier = baseTurboMultiplier;
 		curShipArmor = baseShipArmor;
 		curFisShield = baseLsrShield;
 		curLsrShield = baseLsrShield;
@@ -70,6 +74,9 @@ public class StatsNave : MonoBehaviour {
 	public void setBaseShipHandliing(int bsh) {
 		baseShipHandling = bsh;
 	}
+    public void setBaseTurboMultiplier(float btm) {
+        baseTurboMultiplier = btm;
+    }
 	public void setBaseShipArmor(float bsa) {
 		baseShipArmor = bsa;
 	}
@@ -79,10 +86,11 @@ public class StatsNave : MonoBehaviour {
 	public void setBaseLsrShield(float bls) {
 		baseLsrShield = bls;
 	}
-	public void setAllBaseStats(int bsp, int bsh, float bsa, float bfs, float bls) {
+	public void setAllBaseStats(int bsp, int bsh, float btm, float bsa, float bfs, float bls) {
 		baseShipSpeed = bsp;
 		baseShipHandling = bsh;
-		baseShipArmor = bsa;
+        baseTurboMultiplier = btm;
+        baseShipArmor = bsa;
 		baseFisShield = bfs;
 		baseLsrShield = bls;
 	}
@@ -94,7 +102,11 @@ public class StatsNave : MonoBehaviour {
 	public void setCurShipHandliing(int csh) {
 		curShipHandling = csh;
 	}
-	public void setCurShipArmor(float csa) {
+    public void setCurTurboMultiplier(float ctm)
+    {
+        curTurboMultiplier = ctm;
+    }
+    public void setCurShipArmor(float csa) {
 		curShipArmor = csa;
 	}
 	public void setCurFisShield(float cfs) {
@@ -103,9 +115,10 @@ public class StatsNave : MonoBehaviour {
 	public void setCurLsrShield(float cls) {
 		curLsrShield = cls;
 	}
-	public void setAllCurStats(int csp, int csh, float csa, float cfs, float cls) {
+	public void setAllCurStats(int csp, int csh, float ctm, float csa, float cfs, float cls) {
 		curShipSpeed = csp;
 		curShipHandling = csh;
+        curTurboMultiplier = ctm;
 		curShipArmor = csa;
 		curFisShield = cfs;
 		curLsrShield = cls;
