@@ -974,7 +974,7 @@ Prefab:
     - target: {fileID: 224090518771118980, guid: 0adf67e557d40ac4592cb16e0a0d3426,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 15.710022
+      value: 15.709961
       objectReference: {fileID: 0}
     - target: {fileID: 1114310911871150, guid: 0adf67e557d40ac4592cb16e0a0d3426, type: 2}
       propertyPath: m_IsActive
@@ -1394,8 +1394,8 @@ GameObject:
   - component: {fileID: 1843557260}
   - component: {fileID: 1843557259}
   - component: {fileID: 1843557258}
-  - component: {fileID: 1843557262}
   - component: {fileID: 1843557263}
+  - component: {fileID: 1843557262}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1474,10 +1474,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1843557257}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b260a002be0e72b4097260a45100dd1e, type: 3}
+  m_Script: {fileID: 11500000, guid: de8b486fc8463fb4d80ecf8838cfa649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1602833159}
+  target: {fileID: 1602833159}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: -10}
+  velocity: {x: 1, y: 1}
 --- !u!114 &1843557263
 MonoBehaviour:
   m_ObjectHideFlags: 0

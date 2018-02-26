@@ -23,13 +23,6 @@ public class MovimentoJogador : MonoBehaviour {
 
     private void shipMove()
     {
-        /*	
-            Quaternion rot = transform.rotation;
-            float z = rot.eulerAngles.z;
-            z += (Input.GetAxis("Horizontal") * -1) * rotSpeed * Time.deltaTime;
-            rot = Quaternion.Euler(0, 0, z);
-            transform.rotation = rot;
-        */
 
         //Rotação da nave
         var mousePos = Input.mousePosition;
