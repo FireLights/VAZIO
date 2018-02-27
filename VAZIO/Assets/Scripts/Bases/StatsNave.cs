@@ -47,7 +47,6 @@ public class StatsNave : MonoBehaviour {
         {
 			mov.setShipSpeed(curShipSpeed);
 			mov.setRotSpeed(curShipHandling);
-            mov.setTurboMultiplier(curTurboMultiplier);
         }
 
         if (ai != null)

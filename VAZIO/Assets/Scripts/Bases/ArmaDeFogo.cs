@@ -6,6 +6,20 @@ using UnityEngine;
 
     private float cooldownTimer = 0;
 
+    //Jogador apontar arma
+    public void jogadorApontarArma(float rotSpeed)
+    {
+        var mousePos = Input.mousePosition;
+        var objectPos = Camera.main.WorldToScreenPoint(this.transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        var playerRotationAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90;
+
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0, 0, playerRotationAngle));
+        Quaternion rot = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotSpeed * Time.deltaTime);
+        transform.rotation = rot;
+    }
+
     //Disparo do jogador
     public void playerFireBullet(GameObject projectilePrefab, GameObject nozzle, float fireDelay, int multishotChance)
     {

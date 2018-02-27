@@ -10,6 +10,9 @@ public class CanhaoJogador : ArmaDeFogo
     public float fireDelay = 0.05f;
     public int multishotChance = 10;
 
+    //atributos do canhão
+    public float rotSpeed;
+
     //atributos do projétil
     public int dmgType;
     public float shotSpeed;
@@ -17,15 +20,26 @@ public class CanhaoJogador : ArmaDeFogo
     public float shotDamage;
 
     //objeto da classe base
-    ArmaDeFogo canhao = new ArmaDeFogo();
+    ArmaDeFogo arma = new ArmaDeFogo();
 
     void Start()
     {
-        canhao.setProjectileAtributes(projectilePrefab, shotDamage, dmgType, shotSpeed, shotDissipation);
+        arma.setProjectileAtributes(projectilePrefab, shotDamage, dmgType, shotSpeed, shotDissipation);
     }
 
     void Update()
     {
-        canhao.playerFireBullet(projectilePrefab, nozzle, fireDelay, multishotChance);
+        arma.playerFireBullet(projectilePrefab, nozzle, fireDelay, multishotChance);
+
+
+        var mousePos = Input.mousePosition;
+        var objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
+        var playerRotationAngle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg - 90;
+
+        Quaternion desiredRotation = Quaternion.Euler(new Vector3(0, 0, playerRotationAngle));
+        Quaternion rot = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotSpeed * Time.deltaTime);
+        transform.rotation = rot;
     }
 }
