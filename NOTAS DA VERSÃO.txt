@@ -26,4 +26,6 @@ NOTAS DE VERSÃO:
 	
 	-Efeitos de explosão programados para a nave e para os projéteis;
 
-	-Interface rudimentar;
+	-Interface rudimentar com mini-mapa;
+
+	-Respawn 3 segundos após  destruição do jogador;

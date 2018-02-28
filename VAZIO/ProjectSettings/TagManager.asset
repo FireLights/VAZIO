@@ -22,8 +22,8 @@ TagManager:
   - PlayerProjectile
   - Enemy
   - EnemyProjectile
-  - 
-  - 
+  - FX
+  - MiniMapIcons
   - 
   - 
   - 

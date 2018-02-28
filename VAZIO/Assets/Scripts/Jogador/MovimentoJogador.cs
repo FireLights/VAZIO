@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimentoJogador : MonoBehaviour {
 
@@ -15,16 +16,19 @@ public class MovimentoJogador : MonoBehaviour {
     float spd = 0;
     Vector3 velocity;
     float previousSpeed;
+    public Text velocityUI;
 
     private void Start()
     {
         player = this.transform;
         minSpeed = -maxSpeed / 30;
+        maxSpeed = maxSpeed / 10;
     }
 
     void Update () {
 
         shipMove();
+        updateUI();
     }
 
     private void shipMove()
@@ -74,15 +78,28 @@ public class MovimentoJogador : MonoBehaviour {
 
     private void getSpeed()
     {
-         if (Input.GetAxis("Vertical") == 1  && spd < maxSpeed / 10)
+         if (Input.GetAxis("Vertical") == 1  && spd < maxSpeed)
          {
              spd = spd + Time.deltaTime * shipThrust;
-         }
-         if (Input.GetAxis("Vertical") == -1 && spd > minSpeed)
+            if (spd > maxSpeed)
+                spd = maxSpeed;
+        }
+         if (Input.GetAxis("Vertical") == -1 && spd >= 0)
          {
              spd = spd + Time.deltaTime * shipThrust * -1;
+            if (spd < 0)
+                spd = 0;
          }
 
+    }
+
+    private void updateUI()
+    {
+        velocityUI.text = "Velocidade: " + Mathf.RoundToInt(((spd / maxSpeed)*100)) + "%";
+        if (velocityUI.text == "Velocidade: 100%")
+            velocityUI.color = Color.red;
+        if (velocityUI.text != "Velocidade: 100%")
+            velocityUI.color = Color.green;
     }
 
 

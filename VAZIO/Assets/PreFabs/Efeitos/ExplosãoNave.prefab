@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212786652806938408}
   - component: {fileID: 95234369481083192}
   - component: {fileID: 114879746608341320}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "Explos\xE3oNave"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,6 +71,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0.6
+  explode: 0
+  explosion: {fileID: 0}
 --- !u!212 &212786652806938408
 SpriteRenderer:
   m_ObjectHideFlags: 1
