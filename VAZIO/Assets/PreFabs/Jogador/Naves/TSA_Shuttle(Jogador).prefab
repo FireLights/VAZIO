@@ -885,7 +885,7 @@ MonoBehaviour:
   armorText: {fileID: 114102780884329902}
   fisShieldText: {fileID: 114778247384787942}
   lsrShieldText: {fileID: 114000443545715040}
-  baseShipSpeed: 6
+  baseShipSpeed: 5
   baseShipHandling: 260
   baseTurboMultiplier: 1.3
   curShipSpeed: 0
@@ -910,11 +910,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  shipSpeed: 15
+  shipSpeed: 17
   shipThrust: 0.2
   rotSpeed: 260
   rot: {x: 0, y: 0, z: 0, w: 0}
-  maxSpeed: 2
+  maxSpeed: 2.7
   minSpeed: 0
   velocityUI: {fileID: 114877648968875684}
 --- !u!114 &114566574667420922
