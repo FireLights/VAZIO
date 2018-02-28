@@ -1,6 +1,7 @@
 
 UI:
 -Pôr "scale with screen size" em todos os canvas;
+-Atualizar a data da versão;
 
 Criar Objetos:
 -Pôr os colliders dos projéteis sempre ligeiramente maiores que a sprite para a colisão ser detetada mais fácilmente;
