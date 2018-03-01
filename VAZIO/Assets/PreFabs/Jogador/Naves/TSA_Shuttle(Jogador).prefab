@@ -885,8 +885,12 @@ MonoBehaviour:
   armorText: {fileID: 114102780884329902}
   fisShieldText: {fileID: 114778247384787942}
   lsrShieldText: {fileID: 114000443545715040}
+<<<<<<< HEAD
   baseShipSpeed: 2
   baseShipThrust: 0.2
+=======
+  baseShipSpeed: 5
+>>>>>>> b1b733d93a271c3527519659503a828dba761930
   baseShipHandling: 260
   curShipSpeed: 0
   curShipThrust: 0
@@ -909,10 +913,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1de628da1c8e99b4bb859245c4b8bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   velocityUI: {fileID: 114877648968875684}
   shipThrust: 0.2
   rotSpeed: 260
   maxSpeed: 2.5
+=======
+  player: {fileID: 0}
+  shipSpeed: 17
+  shipThrust: 0.2
+  rotSpeed: 260
+  rot: {x: 0, y: 0, z: 0, w: 0}
+  maxSpeed: 2.7
+>>>>>>> b1b733d93a271c3527519659503a828dba761930
   minSpeed: 0
 --- !u!114 &114566574667420922
 MonoBehaviour:

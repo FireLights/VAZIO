@@ -816,8 +816,12 @@ MonoBehaviour:
   armorText: {fileID: 0}
   fisShieldText: {fileID: 0}
   lsrShieldText: {fileID: 0}
+<<<<<<< HEAD
   baseShipSpeed: 6
   baseShipThrust: 0.2
+=======
+  baseShipSpeed: 4
+>>>>>>> b1b733d93a271c3527519659503a828dba761930
   baseShipHandling: 260
   curShipSpeed: 0
   curShipThrust: 0
