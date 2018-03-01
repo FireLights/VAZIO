@@ -5,22 +5,24 @@ using UnityEngine.UI;
 
 public class MovimentoJogador : MonoBehaviour {
 
-    public Transform player;
+    private Transform player;
+    private StatsNave nave;
+    private Quaternion rot;
+    private Vector3 velocity;
+    public Text velocityUI;
 
-    public float shipSpeed;
     public float shipThrust;
     public float rotSpeed;
-    public Quaternion rot;
     public float maxSpeed;
     public float minSpeed;
-    float spd = 0;
-    Vector3 velocity;
-    float previousSpeed;
-    public Text velocityUI;
+    private float spd = 0;
+    
 
     private void Start()
     {
-        player = this.transform;
+        player = transform;
+        nave = player.GetComponent<StatsNave>();
+        setStats();
         minSpeed = -maxSpeed / 30;
         maxSpeed = maxSpeed / 10;
     }
@@ -31,10 +33,19 @@ public class MovimentoJogador : MonoBehaviour {
         updateUI();
     }
 
+    private void setStats()
+    {
+        maxSpeed = nave.curShipSpeed;
+        rotSpeed = nave.curShipHandling;
+    }
+
     private void shipMove()
     {
 
-        /*  //rodar para o cursor
+        /*  
+         *  OBSOLETO
+         *  
+         *  //rodar para o cursor
             var mousePos = Input.mousePosition;
             var objectPos = Camera.main.WorldToScreenPoint(player.position);
             mousePos.x = mousePos.x - objectPos.x;
@@ -60,21 +71,12 @@ public class MovimentoJogador : MonoBehaviour {
         transform.rotation = rot;
 
         //Movimento da nave
-        previousSpeed = spd;
         getSpeed();
         Vector3 pos = transform.position;
         velocity = new Vector3(0, spd, 0);
         pos += rot * velocity;
         transform.position = pos;
-        checkAcceleration();
     }
-
-    private void checkAcceleration()
-    {
-    /*    if (previousSpeed < spd) { Debug.Log("Aceleração Positiva"); }
-        if (previousSpeed > spd) { Debug.Log("Aceleração Negativa"); }
-        if (previousSpeed == spd) { Debug.Log("Aceleração Nula"); }
-    */}
 
     private void getSpeed()
     {
@@ -100,14 +102,6 @@ public class MovimentoJogador : MonoBehaviour {
             velocityUI.color = Color.red;
         if (velocityUI.text != "Velocidade: 100%")
             velocityUI.color = Color.green;
-    }
-
-
-    public void setShipSpeed(float sS) {
-        shipSpeed = sS;
-    }
-    public void setRotSpeed(float rS) {
-        rotSpeed = rS;
     }
 
 }

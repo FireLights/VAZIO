@@ -9,12 +9,11 @@ public class StatsNave : MonoBehaviour {
 	public Image armorBar, fisShieldBar, lsrShieldBar;
 	public Text armorText, fisShieldText, lsrShieldText;
 
-	public int baseShipSpeed = 6;
-    public int baseShipHandling = 260;
-    public float baseTurboMultiplier = 1.3f;
+	public float baseShipSpeed = 6, baseShipThrust = 0.2f;
+    public int baseShipHandling = 270;
 
-	public int curShipSpeed, curShipHandling;
-    public float curTurboMultiplier;
+    public float curShipSpeed, curShipThrust;
+    public int curShipHandling;
 
     public float baseShipArmor = 50;
     public float baseFisShield = 60;
@@ -37,30 +36,13 @@ public class StatsNave : MonoBehaviour {
 
         //definir as stats
 		resetStatsToBaseStats();
-		passMovStats();
-    }
-		
-    //funçao para definir as stats da nave
-	public void passMovStats()
-    {
-        if (mov != null)
-        {
-			mov.setShipSpeed(curShipSpeed);
-			mov.setRotSpeed(curShipHandling);
-        }
-
-        if (ai != null)
-        {
-			ai.setShipSpeed(curShipSpeed);
-			ai.setRotSpeed(curShipHandling);
-        }
     }
 
 	public void resetStatsToBaseStats() 
 	{
 		curShipSpeed = baseShipSpeed;
 		curShipHandling = baseShipHandling;
-        curTurboMultiplier = baseTurboMultiplier;
+        curShipThrust = baseShipThrust;
 		curShipArmor = baseShipArmor;
 		curFisShield = baseLsrShield;
 		curLsrShield = baseLsrShield;
@@ -73,9 +55,6 @@ public class StatsNave : MonoBehaviour {
 	public void setBaseShipHandliing(int bsh) {
 		baseShipHandling = bsh;
 	}
-    public void setBaseTurboMultiplier(float btm) {
-        baseTurboMultiplier = btm;
-    }
 	public void setBaseShipArmor(float bsa) {
 		baseShipArmor = bsa;
 	}
@@ -88,7 +67,6 @@ public class StatsNave : MonoBehaviour {
 	public void setAllBaseStats(int bsp, int bsh, float btm, float bsa, float bfs, float bls) {
 		baseShipSpeed = bsp;
 		baseShipHandling = bsh;
-        baseTurboMultiplier = btm;
         baseShipArmor = bsa;
 		baseFisShield = bfs;
 		baseLsrShield = bls;
@@ -101,10 +79,6 @@ public class StatsNave : MonoBehaviour {
 	public void setCurShipHandliing(int csh) {
 		curShipHandling = csh;
 	}
-    public void setCurTurboMultiplier(float ctm)
-    {
-        curTurboMultiplier = ctm;
-    }
     public void setCurShipArmor(float csa) {
 		curShipArmor = csa;
 	}
@@ -117,7 +91,6 @@ public class StatsNave : MonoBehaviour {
 	public void setAllCurStats(int csp, int csh, float ctm, float csa, float cfs, float cls) {
 		curShipSpeed = csp;
 		curShipHandling = csh;
-        curTurboMultiplier = ctm;
 		curShipArmor = csa;
 		curFisShield = cfs;
 		curLsrShield = cls;

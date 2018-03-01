@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  defaultRadius: 7
+  defaultRadius: 10
   currentRadius: 0
   weapon01: {fileID: 1708840696672046}
   weapon02: {fileID: 1740534907225346}
@@ -817,11 +817,11 @@ MonoBehaviour:
   fisShieldText: {fileID: 0}
   lsrShieldText: {fileID: 0}
   baseShipSpeed: 6
+  baseShipThrust: 0.2
   baseShipHandling: 260
-  baseTurboMultiplier: 1.3
   curShipSpeed: 0
+  curShipThrust: 0
   curShipHandling: 0
-  curTurboMultiplier: 0
   baseShipArmor: 50
   baseFisShield: 30
   baseLsrShield: 30
