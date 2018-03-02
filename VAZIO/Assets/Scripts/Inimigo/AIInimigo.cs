@@ -14,8 +14,8 @@ public class AIInimigo : MonoBehaviour
     private float shipSpeed;
 
     //objetos referentes ao campo de deteção
-    public float defaultRadius = 5f;
-    public float currentRadius;
+    public float looseTargetRadius = 5f;
+    public float getTargetRadius;
 
     //objetos referentes às armas
     public GameObject weapon01, weapon02;
@@ -33,10 +33,11 @@ public class AIInimigo : MonoBehaviour
 
     void Update()
     {
-        alterRadius();
         if (player == null)
-            disableWeapons();
-        if (lookForTarget())
+        {
+           disableWeapons();
+        }
+        else
         {
             //encontrar jogador por tag "player"
             findPlayer();
@@ -54,19 +55,12 @@ public class AIInimigo : MonoBehaviour
         rotSpeed = nave.curShipHandling;
     }
 
-    //alterar o raio do campo de visão se o jogador se encontra ou não dentro dele
-    private void alterRadius()
-    {
-        if (lookForTarget()) { currentRadius = defaultRadius * 3; }
-        else if (!lookForTarget()) { currentRadius = defaultRadius; }
-    }
-
     //verificar se o jogador se encontra no campo de visão do inimigo
-    public bool lookForTarget()
+	public bool lookForTarget()
     {
-        bool targetAquired = Physics2D.CircleCast(this.transform.position, currentRadius,
+        bool targetAquired = Physics2D.CircleCast(this.transform.position, getTargetRadius,
                 new Vector2(this.transform.position.x, this.transform.position.y), 0, 1 << LayerMask.NameToLayer("Player"));
-        if (targetOnSight = false) { targetAquired = false; }
+        if (targetOnSight = false) { targetAquired = false; } //What? a linha de tiro influencia tu encontrares um target
         return targetAquired;
     }
 
@@ -74,16 +68,9 @@ public class AIInimigo : MonoBehaviour
     private void checkShootingLine()
     {
         targetOnSight = Physics2D.Linecast(lineBegin.position, lineEnd.position, 1 << LayerMask.NameToLayer("Player"));
-        if (targetOnSight)
-        {
-            weapon01.SetActive(true);
-            weapon02.SetActive(true);
-        }
-        else
-        {
-            weapon01.SetActive(false);
-            weapon02.SetActive(false);
-        }
+        
+		weapon01.SetActive(targetOnSight);
+        weapon02.SetActive(targetOnSight);       
     }
 
     //mover o inimigo
@@ -111,15 +98,7 @@ public class AIInimigo : MonoBehaviour
     //encontrar o jogador pela tag
     private void findPlayer()
     {
-        if (player == null)
-        {
-            GameObject go = GameObject.FindWithTag("player");
-            if (go != null)
-            {
-                player = go.transform;
-            }
-        }
-        if (player == null) return;
+       player = GameObject.FindWithTag("player").transform; //So o chamas quanto player não null    
     }
 
     private void disableWeapons()
